@@ -8,13 +8,12 @@ const serverPort = process.env.SERVER_PORT;
 const CustomerRoute = require('./routes/CustomerRoute');
 
 
-
 const app = express();
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 mongoose.connect('mongodb://localhost:27017/TestApp');
 
