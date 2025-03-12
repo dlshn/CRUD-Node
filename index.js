@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const serverPort = process.env.SERVER_PORT;
 
 const CustomerRoute = require('./routes/CustomerRoute');
+const UserRoute = require('./routes/UserRoute');
 
 
 const app = express();
@@ -26,3 +27,4 @@ app.get('/test',(req,res)=>{
 })
 
 app.use('/api/v1/customers',CustomerRoute);
+app.use('/api/v1/users',UserRoute);
