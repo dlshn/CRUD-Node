@@ -14,7 +14,6 @@ const create = (req, resp)=>{
             .catch((error) => resp.status(500).json({'message':'something went wrong',error:error}));
     }catch(e){
         resp.status(500).json({'message':'something went wrong', error:e});
-
     }
 
 }
